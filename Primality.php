@@ -1,28 +1,33 @@
 <?php
 
-$prime = array();
-$i = 2;
-$end = 10000;
+namespace xaaoyama\codetest;
 
-while (true) {
-    if (isPrimeNumber($i)) {
-        array_push($prime, $i);
-    } else {
-        if ($i >= $end){
-            break;
+class Primality
+{
+    function priHan($end)
+    {
+        $prime = array();
+        $i = 2;
+        
+        while (true) {
+        if (isPrimeNumber($i)) {
+            array_push($prime, $i);
+        } else {
+            if ($i >= $end) {
+                break;
+            }
+        }
+            $i++;
+        }
+        //取得した素数の出力
+        foreach ($prime as $value) {
+            echo $value . "\n";
         }
     }
-    $i++;
 }
 
-//取得した素数の出力
-foreach ($prime as $value) {
-    echo $value . " ";
-}
-function isPrimeNumber($target) {
-    //マイナス符号を無視
-    $target = abs($target);
-
+function isPrimeNumber($target)
+{
     //1以下は素数でない
     if ($target < 2) {
         return false;
@@ -39,3 +44,6 @@ function isPrimeNumber($target) {
 
     return true;
 }
+
+$pr = new Primality;
+$pr->priHan(1000);
