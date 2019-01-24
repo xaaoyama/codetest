@@ -22,3 +22,4 @@ class FizzBizz
 
 $fb = new FizzBizz;
 $fb->fbCount();
+ 
