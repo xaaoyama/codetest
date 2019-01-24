@@ -47,3 +47,4 @@ function isPrimeNumber($target)
 
 $pr = new Primality;
 $pr->priHan(1000);
+ 
