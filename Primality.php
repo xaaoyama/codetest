@@ -1,28 +1,13 @@
 <?php
 
-namespace xaaoyama\codetest;
-
-class Primality
+function showPrimeNumbers()
 {
-    function priHan($end)
-    {
-        $prime = array();
-        $i = 2;
-        
-        while (true) {
+    $i = 0;
+    while (true) {
         if (isPrimeNumber($i)) {
-            array_push($prime, $i);
-        } else {
-            if ($i >= $end) {
-                break;
-            }
+            echo $i . "\n";
         }
-            $i++;
-        }
-        //取得した素数の出力
-        foreach ($prime as $value) {
-            echo $value . "\n";
-        }
+        $i++;
     }
 }
 
@@ -33,17 +18,16 @@ function isPrimeNumber($target)
         return false;
     }
 
-    //対象数値の平方根までの整数で
-    //割り切れる数値は素数でない
-    $max = floor(sqrt($target));
+    //対象数値の平方根
+    $max = sqrt($target);
+    //対象数値の平方根以下の素数で割り切れる場合、その数値は素数ではない
     for ($i = 2; $i <= $max; $i++) {
         if ($target % $i == 0) {
             return false;
         }
     }
-
+    //素数で割り切れなかった数値は素数
     return true;
 }
 
-$pr = new Primality;
-$pr->priHan(1000);
+showPrimeNumbers();
