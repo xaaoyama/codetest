@@ -5,6 +5,7 @@
  * Date: 2019/02/18
  * Time: 10:36
  */
+
 //3*3の配列
 
 $first = array(1, 2, 3);
@@ -32,61 +33,61 @@ for ($i = 0; $i < $char; $i++){
             $second[1] = $second[2];
             $second[2] = $tmp;
             break;
-        case "c" :
+        case "c":
             $tmp = $third[0];
             $third[0] = $third[1];
             $third[1] = $third[2];
             $third[2] = $tmp;
             break;
-        case "d" :
+        case "d":
             $tmp = $third[0];
             $third[0] = $second[0];
             $second[0] = $first[0];
             $first[0] = $tmp;
             break;
-        case "e" :
+        case "e":
             $tmp = $third[1];
             $third[1] = $second[1];
             $second[1] = $first[1];
             $first[1] = $tmp;
             break;
-        case "f" :
+        case "f":
             $tmp = $third[2];
             $third[2] = $second[2];
             $second[2] = $first[2];
             $first[2] = $tmp;
             break;
-        case "g" :
+        case "g":
             $tmp = $third[2];
             $third[2] = $third[1];
             $third[1] = $third[0];
             $third[0] = $tmp;
             break;
-        case "h" :
+        case "h":
             $tmp = $second[2];
             $second[2] = $second[1];
             $second[1] = $second[0];
             $second[0] = $tmp;
             break;
-        case "i" :
+        case "i":
             $tmp = $first[2];
             $first[2] = $first[1];
             $first[1] = $first[0];
             $first[0] = $tmp;
             break;
-        case "j" :
+        case "j":
             $tmp = $first[2];
             $first[2] = $second[2];
             $second[2] = $third[2];
             $third[2] = $tmp;
             break;
-        case "k" :
+        case "k":
             $tmp = $first[1];
             $first[1] = $second[1];
             $second[1] = $third[1];
             $third[1] = $tmp;
             break;
-        case "l" :
+        case "l":
             $tmp = $first[0];
             $first[0] = $second[0];
             $second[0] = $third[0];
