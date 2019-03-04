@@ -101,7 +101,7 @@ for ($i = 0; $i < $commandsNumber; $i++){
 //配列の出力の処理
 
 for ($i = 0; $i <= 2; $i++){
-  for($j = 0;$j <= 2;$j++){
+  for ($j = 0; $j <= 2; $j++){
     echo $matrix[$i][$j];
   }
   echo "\n";
